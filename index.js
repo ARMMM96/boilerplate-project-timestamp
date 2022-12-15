@@ -33,7 +33,7 @@ app.get("/api/:date?", function (req, res) {
     const dateInt = parseInt(dateFromUser);
     const udtVersion = new Date(dateInt).toUTCString();
 
-    res.json({ unix: dateFromUser.valueOf(), utc: udtVersion })
+    res.json({ unix: dateInt, utc: udtVersion })
 
   }
 
